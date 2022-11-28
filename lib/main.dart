@@ -32,11 +32,38 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
-      body: const Center(
-        child: Text(
-          "Marwan Hisham",
-        ),
-      ),
+      body: Center(
+          child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset("assets/images/onboard.png"),
+          const SizedBox(
+            height: 50,
+          ),
+          const Text(
+            textAlign: TextAlign.center,
+            'Watch movies in Virtual Reality',
+            style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(
+            height: 15,
+          ),
+          SizedBox(
+            width: MediaQuery.of(context).size.width * 0.70,
+            child: const Text(
+              textAlign: TextAlign.center,
+              'Download and watch offline wherever you are',
+              style: TextStyle(
+                fontSize: 16,
+                color: Colors.white70,
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 30,
+          ),
+        ],
+      )),
     );
   }
 }
