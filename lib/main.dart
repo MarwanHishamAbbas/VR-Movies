@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vr_movies/styles.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'VR Movies',
       home: const MyHomePage(),
-      theme: ThemeData(),
+      theme: AppTheme.themeData,
     );
   }
 }
@@ -30,10 +31,10 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
+      backgroundColor: Theme.of(context).backgroundColor,
+      body: const Center(
         child: Text(
-          "Hello",
-          style: Theme.of(context).textTheme.headline1,
+          "Marwan Hisham",
         ),
       ),
     );
